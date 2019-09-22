@@ -12,7 +12,7 @@
                 <MenuItem Header="Создать"/>
                 <MenuItem Header="Открыть"/>
                 <MenuItem Header="Сохранить"/>
-                <Separator> </Separator>
+                <Separator></Separator>
                 <MenuItem Header="Выход" Click="MenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="Сервис">
@@ -26,10 +26,97 @@
             <TextBlock>Готов к работе</TextBlock>
         </StatusBar>
         <TabControl>
-            <TabItem Header="Панели"/>
-            <TabItem Header="Списки рассылки"/>
+            <TabItem Header="Панели">
+                <TabControl TabStripPlacement="Bottom">
+                    <TabItem Header="Grid">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="77*"/>
+                                <ColumnDefinition Width="123*"/>
+                                <ColumnDefinition Width="186*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="32*"/>
+                                <RowDefinition Height="33*"/>
+                                <RowDefinition Height="33*"/>
+                                <RowDefinition Height="31*"/>
+                                <RowDefinition Height="30*"/>
+
+                            </Grid.RowDefinitions>
+                            <Button Content="Button" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="88,24,0,0" VerticalAlignment="Top" Width="75"/>
+                            <TextBox Grid.Column="2" Grid.Row="1" Background="Red">123</TextBox>
+                            <Ellipse Fill="Blue" Stroke="Red" StrokeThickness="2"
+                                     Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="StackPanel">
+                        <StackPanel>
+                            <Button HorizontalAlignment="Center" Padding="30,10" Margin="0,10">Кнопка 1</Button>
+                            <Button HorizontalAlignment="Left">Кнопка 2</Button>
+                            <Button HorizontalAlignment="Right">Кнопка 3</Button>
+                            <TextBox>Текст бокс</TextBox>
+                            <Calendar></Calendar>
+                            <Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="https://images.onlinelabels.com/images/clip-art/nicubunu/nicubunu_Simple_flag_on_a_pole.png" Height="30"></Image>
+                                    <TextBlock Text="Кнопка с флагом"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="DockPanel">
+                        <DockPanel>
+                            <Button DockPanel.Dock="Right">Кнопка 1</Button>
+                            <Button DockPanel.Dock="Bottom">Кнопка 2</Button>
+                            <Button DockPanel.Dock="Top">Кнопка 3</Button>
+                            <Button>Кнопка 4</Button>
+                            <Rectangle Fill="Blue" Stroke="Red" StrokeThickness="7"
+                                       StrokeDashArray="5,2" RadiusX="98" RadiusY="98"></Rectangle>
+                        </DockPanel>
+
+                    </TabItem>
+                    <TabItem Header="Canvas">
+                        <Canvas>
+                            <Button Padding="50,20" Canvas.Top="50" Canvas.Left="20">Кнопка</Button>
+                            <Label Canvas.Bottom="20" Canvas.Right="10">Метка</Label>
+                        </Canvas>
+                    </TabItem>
+                    <TabItem Header="WrapPanel">
+                        <WrapPanel>
+                            <Button Content="Кнопка1" Padding="50,20"/>
+                            <Label Content="Метка"/>
+                            <Button Content="Кнопка2" Padding="50,20"/>
+                            <Label Content="Метка"/>
+                            <Button Content="Кнопка3" Padding="50,20"/>
+                            <Label Content="Метка"/>
+                            <Button Content="Кнопка4" Padding="50,20"/>
+                            <Label Content="Метка"/>
+                            <Button Content="Кнопка5" Padding="50,20"/>
+                            <Label Content="Метка"/>
+                            <Button Content="Кнопка6" Padding="50,20"/>
+                            <Label Content="Метка"/>
+                            <Button Content="Кнопка7" Padding="50,20"/>
+
+                        </WrapPanel>
+                    </TabItem>
+                    <TabItem Header="UniformGrid">
+                        <UniformGrid Columns="2" VerticalAlignment="Top">
+                            <TextBlock>Фамилия</TextBlock>
+                            <TextBox>Поле ввода</TextBox>
+                            <TextBlock>Имя</TextBlock>
+                            <TextBox>Поле ввода</TextBox>
+                            <TextBlock>Отчество</TextBlock>
+                            <TextBox>Поле ввода</TextBox>
+                            <TextBlock>Номер</TextBlock>
+                            <TextBox>Поле ввода</TextBox>
+                        </UniformGrid>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+            <TabItem Header="Списки"/>
             <TabItem Header="Планировщик"/>
             <TabItem Header="Письма"/>
+
         </TabControl>
     </DockPanel>
 </Window>
