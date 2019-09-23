@@ -33,12 +33,14 @@ namespace MailSenderTestWPF
                     try
                     {
                         client.Send(message);
-                        MessageBox.Show("Отправлено", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        SendEndWindow sew = new SendEndWindow();
+                        sew.ShowDialog();
 
                     }
-                    catch (Exception error)
+                    catch (Exception)
                     {
-                        MessageBox.Show(error.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        errWindow ersew = new errWindow();
+                        ersew.ShowDialog();
                     }
 
                 }

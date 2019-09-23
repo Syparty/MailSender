@@ -15,26 +15,26 @@
 
                     <Button Content="Отправить" HorizontalAlignment="Left" Margin="323,222,0,0" VerticalAlignment="Top" Width="87" Height="22" Click="Button_Click"/>
                     <Label Content="Тема письма:" HorizontalAlignment="Left" Margin="5,48,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="themE" HorizontalAlignment="Left" Height="23" Margin="99,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293"/>
+                    <TextBox x:Name="themE" HorizontalAlignment="Left" Height="23" Margin="99,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" Text="test@test.com"/>
                     <TextBox x:Name="MailE" HorizontalAlignment="Left" Height="107" Margin="10,88,0,0" TextWrapping="Wrap" Text="Содержимое письма" VerticalAlignment="Top" Width="400">
                         <TextBox.Effect>
                             <DropShadowEffect/>
                         </TextBox.Effect>
                     </TextBox>
                     <Label Content="Адрес отправки:" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="AddressE" HorizontalAlignment="Left" Height="23" Margin="99,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298"/>
+                    <TextBox x:Name="AddressE" HorizontalAlignment="Left" Height="23" Margin="99,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="298" Text="test@test.com"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Настройка">
                 <UniformGrid Columns="2" VerticalAlignment="Top">
                     <Label Content="Адрес почты:"/>
-                    <TextBox x:Name="UserE"/>
+                    <TextBox x:Name="UserE" Text="test@test.com"/>
                     <Label Content="Пароль:"/>
-                    <PasswordBox x:Name="PassE"/>
+                    <PasswordBox x:Name="PassE" Password="test@test.com"/>
                     <Label Content="SMTP Сервер:"/>
-                    <TextBox x:Name="SMTPE"/>
+                    <TextBox x:Name="SMTPE" Text="test@test.com"/>
                     <Label Content="Порт Сервера:"/>
-                    <TextBox x:Name="PortE"/>
+                    <TextBox x:Name="PortE" Text="25"/>
 
                 </UniformGrid>
             </TabItem>
