@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="MailSender.Controls.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MailSender.Controls"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d" 
+             d:DesignHeight="88.732" d:DesignWidth="410.211">
+    <UniformGrid Rows="1" Button.Click="UniformGrid_Click">
+        <Button ToolTip="Назад" Name="LeftButton">
+            <fa:ImageAwesome Icon="Backward"/>
+        </Button>
+        <Button ToolTip="Вперед" Name="RightButton">
+            <fa:ImageAwesome Icon="Forward"/>
+        </Button>
+    </UniformGrid>
+</UserControl>

@@ -8,6 +8,7 @@
         xmlns:data="clr-namespace:MailSenderLib.Data;assembly=MailSenderLib"
         xmlns:Entityes="clr-namespace:MailSenderLib.Entityes;assembly=MailSenderLib"
         xmlns:db="clr-namespace:MailSenderLib.Data.Linq2SQL;assembly=MailSenderLib"
+        xmlns:ctl="clr-namespace:MailSender.Controls"
         mc:Ignorable="d"
         Title="WpfMailSender" Height="450" Width="800">
     <DockPanel>
@@ -30,11 +31,14 @@
             <StatusBarItem DockPanel.Dock="Right">
                 <TextBlock>Готов к работе</TextBlock>
             </StatusBarItem>
+            <StatusBarItem>
+                <ctl:UserControl1 Height="22" Width="100" LeftButtonVisible="False" LeftButtonClick="UserControl1_LeftButtonClick" RightButtonClick="UserControl1_RightButtonClick"/>
+            </StatusBarItem>
             <StatusBarItem>        
                 <ProgressBar Value="30" Width="60" Height="20"/>
             </StatusBarItem>
         </StatusBar>
-        <TabControl>
+        <TabControl Name="MaintabControl">
             <TabItem Header="Рассылка">
                 <Grid>
                     <Grid.Resources>
