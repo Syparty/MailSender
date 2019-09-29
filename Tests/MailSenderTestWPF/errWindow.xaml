@@ -1,0 +1,14 @@
+﻿<Window x:Name="ErrWin" x:Class="MailSenderTestWPF.errWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailSenderTestWPF"
+        mc:Ignorable="d"
+        Title="errWindow" Height="482.028" Width="913.701" WindowStyle="None" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Left" Width="904">
+        <Label Content="ОШИБКА, ПРОВЕРЬТЕ ПАРАМЕТРЫ И ПОВТОРИТЕ" HorizontalAlignment="Center" Margin="10,51,29,189" VerticalAlignment="Center" Background="White" Foreground="Red" FontSize="36" Height="215" Width="865"/>
+        <Button x:Name="bntErOk" Content="OK" HorizontalAlignment="Left" Margin="315,271,0,0" VerticalAlignment="Top" Width="235" Height="76" Click="BntErOk_Click"/>
+
+    </Grid>
+</Window>
