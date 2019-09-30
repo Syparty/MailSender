@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MailSenderTestWPF"
         mc:Ignorable="d"
-        Title="MailSenderTest" Height="314" Width="438">
+        Title="{Binding Text, ElementName=TextEditor}" Height="314" Width="438">
 
     <Grid>
 
@@ -38,8 +38,75 @@
 
                 </UniformGrid>
             </TabItem>
+            <TabItem Header="Конец урока-2.1">
+                <Grid>
+                    <TextBox Name="TextEditor" Text="36.1009174311926"
+                        HorizontalAlignment="Left" Height="23" Margin="24,85,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                    <TextBlock Name="TextViewr" Text="{Binding ElementName=TextEditor, Path=Text}"
+                        HorizontalAlignment="Left" Margin="24,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+                    <ProgressBar Value="{Binding Text, ElementName=TextEditor}" 
+                                 Minimum="0" Maximum="100"
+                        HorizontalAlignment="Left" Height="10" Margin="24,140,0,0" VerticalAlignment="Top" Width="100"/>
+                    <Slider Value="{Binding Text, ElementName=TextEditor}" 
+                            Minimum="0" Maximum="100" SmallChange="10"
+                        HorizontalAlignment="Left" Margin="24,167,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Text="{Binding Text, ElementName=TextEditor}"
+                        HorizontalAlignment="Left" Height="23" Margin="159,85,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Конец урока-2.2">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="69*"/>
+                        <RowDefinition Height="58*"/>
+                    </Grid.RowDefinitions>
+                    <Canvas Grid.RowSpan="2" Margin="79,43">
+                        <Ellipse Width="90" Height="50" Fill="Blue" Stroke="Red" StrokeThickness="4"
+                                 Canvas.Left="{Binding Value, ElementName=onesleder}"
+                                 Canvas.Top="{Binding Value, ElementName=twoslider}"
+                                 RenderTransformOrigin="0.5,0.5">
+                            <Ellipse.RenderTransform>
+                                <RotateTransform Angle="{Binding Value, ElementName=treslider}"/>
+                            </Ellipse.RenderTransform>
+                        </Ellipse>
 
 
+
+
+                    </Canvas>
+                    <Slider Maximum="100" Name="twoslider"
+                        HorizontalAlignment="Left" Margin="-34,62,0,0" VerticalAlignment="Top" Height="34" Width="93" RenderTransformOrigin="0.5,0.5">
+                        <Slider.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="90.006"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Slider.RenderTransform>
+                    </Slider>
+                    <Slider Maximum="120" Name="onesleder"
+                        HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" Height="34" Width="262"/>
+                    <Slider Maximum="360" Name="treslider"
+                        HorizontalAlignment="Left" Margin="-13,82,0,0" VerticalAlignment="Top" Height="34" Width="93" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+                        <Slider.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleY="0.665"/>
+                                <SkewTransform AngleY="23.698" AngleX="-48.907"/>
+                                <RotateTransform Angle="24.781"/>
+                                <TranslateTransform X="4.984" Y="-25.095"/>
+                            </TransformGroup>
+                        </Slider.RenderTransform>
+                    </Slider>
+
+
+                </Grid>
+            </TabItem>
+            <Canvas Height="100" Width="100"/>
         </TabControl>
+
     </Grid>
+
 </Window>
